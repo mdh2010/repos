@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Old-Timey Computer Museum</title>
+    <meta charset="utf-8">
+    <style>
+        body{background-color: aliceblue;}
+        *{font-family: 'Courier New', Courier, monospace;}
+    </style>
+</head>
+<body>
+    <h1>Old-Timey Computer Museum</h1>
+    <form action="/pledgeform.php" method="POST">
+        <fieldset>
+            <legend>Support The Museum</legend>
+            <fieldset>
+                <legend>Pledge Signup</legend>
+                    <ul style="list-style-type: none;">
+                        <li>
+                            <label for="firstname">First Name:</label>
+                            <input type="text" name="firstname" id="firstname" required>
+                            <label for="lastname">Last Name:</label>
+                            <input type="text" name="lastname" id="lastname" required>
+                        </li>
+                        <li>
+                            <label for="address-street">Street Address:</label>
+                            <input type="text" name="address-street" id="address-street" required>
+                        </li>
+                        <li>
+                            <label for="address-city">City:</label>
+                            <input type="text" name="address-city" id="address-city" required>
+                            <label for="address-state">State:</label>
+                            <input type="text" name="address-state" id="address-state" required>
+                            <label for="address-zip">Zip Code:</label>
+                            <input type="text" name="address-zip" id="address-zip" required>
+                        <li>
+                                <label for="phone">Phone Number:</label>
+                                <input type="tel" name="phone" id="phone" placeholder="555-123-4567" minlength="12" maxlength="12" required>
+                        </li>
+                        <li>
+                                <label for="email">Email:</label>
+                                <input type="email" name="email" id="email" required>
+                        </li>
+                    </ul>
+            </fieldset>
+            <fieldset>
+                <legend>Pledge Amount</legend>
+                <p>Select your pledge level:</p>
+                <ul>
+                    <li><input type="radio" name="pledgelevel" checked value="student">($20) Student</li>
+                    <li><input type="radio" name="pledgelevel" value="individual">($45) Individual</li>
+                    <li><input type="radio" name="pledgelevel" value="family">($60) Family</li>
+                    <li><input type="radio" name="pledgelevel" value="patron">($250) Patron</li>
+                    <li><input type="radio" name="pledgelevel" value="benefactor">($750) Benefactor</li>
+                </ul>
+                <p>
+                    <label for="honoree">(Optional) The Honoree of your Pledge:</label>
+                    <input type="text" name="honoree" id="honoree">
+                </p>
+                <p>
+                    <label for="honoreetext">(Optional) Message for your Honoree:</label>
+                    <br><textarea name="honoreetext" maxlength=500 placeholder="500 characters max" cols="100" rows="5"></textarea>
+                </p>
+                <p>
+                    <label for="inmemoriam">(Optional) In Memoriam of your Pledge:</label>
+                    <input type="text" name="inmemoriam" id="inmemoriam">            
+                </p>
+                <p>
+                        <label for="inmemoriamtext">(Optional) In Memoriam Pledge Message:</label>
+                        <br><textarea name="inmemoriamtext" maxlength="500" placeholder="500 characters max" cols="100" rows="5"></textarea>
+                </p>
+                <input type="submit" value="Submit">
+            </fieldset>
+        </fieldset>
+    </form>
+</body>
+</html>
